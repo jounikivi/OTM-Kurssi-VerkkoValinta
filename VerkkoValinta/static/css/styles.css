@@ -103,7 +103,7 @@ body {
   /*color: #04414d;*/
   text-align: var(--bs-body-text-align);
   /*background-color: var(--bs-body-bg);*/
-  background-color: darkslateblue;
+  background-color: pink;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
