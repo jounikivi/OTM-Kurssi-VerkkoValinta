@@ -103,10 +103,22 @@ body {
   /*color: #04414d;*/
   text-align: var(--bs-body-text-align);
   /*background-color: var(--bs-body-bg);*/
-  background-color: pink;
+  background-color: #e0f8d0;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+/* muuttaa hederin taustaa */
+.bg{
+  background-color: #c2c0bc;
+}
+/*loppu*/
+
+/*muuttaa tuotekortin taustaväriä*/
+.p-4{
+ /* background-color: #2a5a6c;*/
+}
+/*loppu*/
 
 hr {
   margin: 1rem 0;
