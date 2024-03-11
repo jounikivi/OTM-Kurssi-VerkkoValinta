@@ -29,3 +29,23 @@ def create_profile(sender, instance, created, **kwargs):
 
 # Automate the profile thing
 post_save.connect(create_profile, sender=User)
+
+class Customer(models.Model):
+  first_name = models.CharField(max_length=60)
+  last_name = models.CharField(max_length=60)
+  phone = models.CharField(max_length=100)
+  email = models.EmailField(max_length=100)
+  password = models.CharField(max_length=100)
+  
+  def __str__ (self):
+    return f'{self.first_name} {self.last_name}'
+
+
+class Category(models.Model):
+  name = models.CharField(max_length=200)
+  
+  def __str__(self):
+    return self.name;
+  
+  class Meta:
+    verbose_name_plural = "Categories"
