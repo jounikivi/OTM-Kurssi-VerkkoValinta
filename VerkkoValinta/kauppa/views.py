@@ -9,8 +9,9 @@ from django import forms
 
 # Create your views here.
 def home(request):
-  #products = Product.objects.all()
-  return render(request, 'home.html', {})
+  random_products = Product.objects.order_by('?')[:8]
+  context ={'random_products': random_products}
+  return render(request, 'home.html', context)
 
 def about(request):
   return render(request, 'about.html')
