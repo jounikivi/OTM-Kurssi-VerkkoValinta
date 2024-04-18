@@ -8,6 +8,21 @@ from .forms import *
 from django import forms
 
 # Create your views here.
+def category(request, foo):
+  foo = foo.replace('-', ' ')
+  try:
+    category = Category.objects.get(name=foo)
+    products = Product.objects.filter(category=category)
+    return render(request, 'category.html', {'products':products, 'category':category})
+  except:
+    messages.success(request, ("That Category Doesn't Exist"))
+    return redirect('home')
+
+def product(request,pk):
+  product = Product.objects.get(id=pk)
+  return render(request, 'product.html', {'product':product})
+
+
 def home(request):
   random_products = Product.objects.order_by('?')[:8]
   context ={'random_products': random_products}
